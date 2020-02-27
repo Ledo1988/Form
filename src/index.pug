@@ -1,7 +1,21 @@
 extends pug/base
 
+prepend vars
+	- title = "Анкета"
+
 append vars
-	//- ...
+	//-..
 
 block content
-	//- ...
+	main
+		.candidate--wrapper
+			.candidate
+				.candidate__img
+					img(src="/images/img_avatar.jpeg" width="348" height="500" alt="Кандидат")
+				.candidate__info
+					+input("candidate__info-item", "name", "Елена", "text", "name")
+					+input("candidate__info-item", "birthday", "27.10.1988", "text", "date")
+					+input("candidate__info-item", "city", "Санкт-Петербург", "text", "city")
+					+input("candidate__info-item", "contacts", "+7(911) 240-03-14, elena_1988@live.ru", "text", "contacts")
+		.skills
+

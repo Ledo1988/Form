@@ -1,0 +1,46 @@
+.candidate {
+	display: flex;
+	justify-content: flex-start;
+	padding: 30px 21px 33px 21px;
+	background-color: $color-white;
+
+	&__img {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		width: 140px;
+		height: 140px;
+		margin-right: 23px;
+		border-radius: 100%;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__info {
+		flex-grow: 1;
+	}
+
+	&__info-item {
+		width: 100%;
+		margin-bottom: 34px;
+
+		input {
+			width: 100%;
+			border: none;
+			border-bottom: 2px solid $color-mineShaft;
+		}
+	}
+
+
+	&--wrapper {
+		@include container;
+		padding-top: 60px;
+	}
+
+}

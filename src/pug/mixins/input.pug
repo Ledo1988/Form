@@ -1,0 +1,4 @@
+mixin input(className, idName, value, type, name)
+	.label--wrapper(class=className)
+		label(for=idName)
+			input(id=idName value=value type=type name=name readonly)
