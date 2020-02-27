@@ -1,0 +1,28 @@
+.skills {
+	position: relative;
+	border-bottom: 2px solid $color-gallery;
+	padding: 33px 21px 40px;
+	background-color: $color-white;
+
+	&__title {
+		margin-bottom: 25px;
+		font-size: 18px;
+		color: $color-black;
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		margin-bottom: -40px;
+	}
+
+	&__list-item {
+		width: calc(100% / 4);
+		text-transform: uppercase;
+	}
+
+	&--wrapper {
+		@include container;
+	}
+}

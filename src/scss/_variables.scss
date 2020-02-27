@@ -4,11 +4,13 @@
 
 $color-black: #000;
 $color-white: #fff;
-
 $color-gallery: #f0f0f0;
-
-$color-mineShaft: #333333;
+$color-mineShaft: #333;
+$color-doveGray: #666;
+$color-cerulean: #0093d7;
 
 // FONTS
-$font-family-roboto-medium: 'Roboto-Medium', sans-serif;
-$font-family-roboto-black: 'Roboto-Black', sans-serif;
+$font-family-roboto: "Roboto", sans-serif;
+
+//
+$transition: 0.2s ease-in-out;

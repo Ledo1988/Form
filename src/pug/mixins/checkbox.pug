@@ -1,0 +1,5 @@
+mixin input__checkbox(className, idName, name, value, Title, checked)
+	li.checkbox--wrapper(class=className)
+		input(type="checkbox" id=idName name=name value=value checked=checked)
+		label(for=idName)
+			span=Title
