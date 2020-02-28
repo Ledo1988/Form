@@ -49,7 +49,8 @@ input {
 		opacity: 0;
 		pointer-events: none;
 
-		&:checked {
+		&:checked,
+		&:checked:hover {
 			~ label::before {
 				background-color: $color-cerulean;
 				opacity: 1;

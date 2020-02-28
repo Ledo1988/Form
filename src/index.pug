@@ -19,21 +19,32 @@ block content
 					+input("candidate__info-item candidate__info-item-contacts", "contacts", "+7(911) 240-03-14, elena_1988@live.ru", "text", "contacts")
 		.skills--wrapper
 			.skills
-				.skills__title
-					| Навыки
-				ul.skills__list
-					+input__checkbox("skills__list-item", "HTML5", "HTML5", "", "HTML5", "checked")
-					+input__checkbox("skills__list-item", "SASS", "SASS", "", "SASS", "checked")
-					+input__checkbox("skills__list-item", "VanillaJS", "VanillaJS", "", "VanillaJS")
-					+input__checkbox("skills__list-item", "GIT", "GIT", "", "GIT", "checked")
-					+input__checkbox("skills__list-item", "CSS3", "CSS3", "", "CSS3", "checked")
-					+input__checkbox("skills__list-item", "LESS", "LESS", "", "LESS")
-					+input__checkbox("skills__list-item", "Angular", "Angular", "", "Angular")
-					+input__checkbox("skills__list-item", "Foundation", "Foundation", "", "Foundation")
-					+input__checkbox("skills__list-item", "БЭМ", "БЭМ", "", "БЭМ", "checked")
-					+input__checkbox("skills__list-item", "GULP", "GULP", "", "GULP", "checked")
-					+input__checkbox("skills__list-item", "Jquery", "Jquery", "", "Jquery", "checked")
-					+input__checkbox("skills__list-item", "Boostrap", "Boostrap", "", "Boostrap", "checked")
-
-
-
+				.skills__main
+					.skills__title
+						| Навыки
+					ul.skills__list
+						+input__checkbox("skills__list-item", "HTML5", "HTML5", "", "HTML5", "checked")
+						+input__checkbox("skills__list-item", "SASS", "SASS", "", "SASS", "checked")
+						+input__checkbox("skills__list-item", "VanillaJS", "VanillaJS", "", "VanillaJS")
+						+input__checkbox("skills__list-item", "GIT", "GIT", "", "GIT", "checked")
+						+input__checkbox("skills__list-item", "CSS3", "CSS3", "", "CSS3", "checked")
+						+input__checkbox("skills__list-item", "LESS", "LESS", "", "LESS")
+						+input__checkbox("skills__list-item", "Angular", "Angular", "", "Angular")
+						+input__checkbox("skills__list-item", "Foundation", "Foundation", "", "Foundation")
+						+input__checkbox("skills__list-item", "БЭМ", "БЭМ", "", "БЭМ", "checked")
+						+input__checkbox("skills__list-item", "GULP", "GULP", "", "GULP", "checked")
+						+input__checkbox("skills__list-item", "Jquery", "Jquery", "", "Jquery", "checked")
+						+input__checkbox("skills__list-item", "Boostrap", "Boostrap", "", "Boostrap", "checked")
+				.skills__js
+					.circle
+						svg.circle__meter
+							circle.circle__meter-first(r="100" cx="50%" cy="50%")
+							circle.circle__meter-divider-first(r="100" cx="50%" cy="50%")
+							circle.circle__meter-second(r="100" cx="50%" cy="50%")
+							circle.circle__meter-divider-second(r="100" cx="50%" cy="50%")
+							circle.circle__meter-third(r="100" cx="50%" cy="50%")
+							circle.circle__meter-mask(r="100" cx="50%" cy="50%")
+						span(class="circle__meter-needle sprite-ico_arrow")
+						input(id="circle__meter-slider" type="range" min="0" max="100" value="0")
+						label(id="lbl value" for="")
+							| 0

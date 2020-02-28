@@ -1,8 +1,15 @@
 .skills {
 	position: relative;
-	border-bottom: 2px solid $color-gallery;
-	padding: 33px 21px 40px;
 	background-color: $color-white;
+
+	&__main {
+		border-bottom: 2px solid $color-gallery;
+		padding: 33px 21px 40px;
+	}
+
+	&__js {
+		padding: 33px 21px 40px;
+	}
 
 	&__title {
 		margin-bottom: 25px;

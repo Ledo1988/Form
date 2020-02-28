@@ -1,0 +1,63 @@
+.circle {
+	position: relative;
+	width: 256px;
+	height: 296px;
+
+	&__meter{
+		width: 100%;
+		height: 100%;
+		transform: rotateX(180deg);
+	}
+
+	&__meter-first{
+		stroke: $color-lightningYellow;
+		stroke-width: 53px;
+		fill: none;
+		stroke-dasharray: 314, 628;
+
+	}
+
+	&__meter-divider-first {
+		stroke: $color-white;
+		stroke-width: 55px;
+		fill: none;
+		stroke-dasharray: 220, 628;
+	}
+
+	&__meter-second{
+		stroke: $color-atlantis;
+		stroke-width: 53px;
+		fill: none;
+		stroke-dasharray: 210, 628;
+	}
+
+	&__meter-divider-second {
+		stroke: $color-white;
+		stroke-width: 55px;
+		fill: none;
+		stroke-dasharray: 105, 628;
+	}
+
+	&__meter-third{
+		stroke: $color-cerulean;
+		stroke-width: 53px;
+		fill: none;
+		stroke-dasharray: 95, 628;
+	}
+
+	&__meter-mask {
+		stroke: rgba(255,255,255,0.7);
+		stroke-width: 53px;
+		fill: none;
+		stroke-dasharray: 314, 628;
+	}
+
+	&__meter-needle {
+		position: absolute;
+		top: calc(50% - 10px);
+		left: calc(50% - 55px);
+		width: 65px;
+		height: 20px;
+	}
+}
+
