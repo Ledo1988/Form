@@ -13,6 +13,13 @@
 		position: absolute;
 		right: 5px;
 		bottom: 10px;
+
+		@include mobile-sm {
+			bottom: 70px;
+			width: 107px;
+			height: 90px;
+			background-size: 120px 90px;
+		}
 	}
 
 	&__img {
@@ -28,8 +35,14 @@
 		height: 140px;
 
 		img {
+			flex-shrink: 0;
 			width: 100%;
 			height: auto;
+		}
+
+		@include mobile-sm {
+			align-self: center;
+			margin-bottom: 25px;
 		}
 	}
 
@@ -60,5 +73,9 @@
 
 	&--wrapper {
 		@include container;
+	}
+
+	@include mobile-sm {
+		flex-direction: column;
 	}
 }

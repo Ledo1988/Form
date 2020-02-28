@@ -10,7 +10,11 @@
 	&__js {
 		display: flex;
 		justify-content: flex-start;
-		padding: 33px 21px 40px;
+		padding: 33px 21px 67px;
+
+		@include mobile-sm {
+			flex-direction: column;
+		}
 	}
 
 	&__title {
@@ -29,6 +33,10 @@
 	&__list-item {
 		width: calc(100% / 4);
 		text-transform: uppercase;
+
+		@include mobile-sm {
+			width: calc(100% / 2);
+		}
 	}
 
 	&--wrapper {

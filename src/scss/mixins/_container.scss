@@ -4,4 +4,8 @@
 	padding: 0 21px;
 	width: 100%;
 	max-width: 703px;
+
+	@include mobile-sm {
+		max-width: 100%;
+	}
 }
