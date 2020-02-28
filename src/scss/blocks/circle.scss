@@ -1,63 +1,104 @@
 .circle {
-	position: relative;
-	width: 256px;
-	height: 296px;
+	width: 100%;
+	height: 100%;
+	transform: rotateX(180deg);
 
-	&__meter{
-		width: 100%;
-		height: 100%;
-		transform: rotateX(180deg);
+	&--wrapper{
+		position: relative;
+		width: 256px;
+		height: 296px;
 	}
 
-	&__meter-first{
-		stroke: $color-lightningYellow;
-		stroke-width: 53px;
-		fill: none;
-		stroke-dasharray: 314, 628;
+	&__item {
 
+		&-first {
+			stroke: $color-lightningYellow;
+			stroke-width: 53px;
+			fill: none;
+			stroke-dasharray: 314, 628;
+		}
+
+		&-divider-first {
+			stroke: $color-white;
+			stroke-width: 55px;
+			fill: none;
+			stroke-dasharray: 220, 628;
+		}
+
+		&-second{
+			stroke: $color-atlantis;
+			stroke-width: 53px;
+			fill: none;
+			stroke-dasharray: 210, 628;
+		}
+
+		&-divider-second {
+			stroke: $color-white;
+			stroke-width: 55px;
+			fill: none;
+			stroke-dasharray: 105, 628;
+		}
+
+		&-third{
+			stroke: $color-cerulean;
+			stroke-width: 53px;
+			fill: none;
+			stroke-dasharray: 95, 628;
+		}
+
+		&-mask {
+			stroke: rgba(255,255,255,0.7);
+			stroke-width: 53px;
+			fill: none;
+
+		}
 	}
 
-	&__meter-divider-first {
-		stroke: $color-white;
-		stroke-width: 55px;
-		fill: none;
-		stroke-dasharray: 220, 628;
-	}
-
-	&__meter-second{
-		stroke: $color-atlantis;
-		stroke-width: 53px;
-		fill: none;
-		stroke-dasharray: 210, 628;
-	}
-
-	&__meter-divider-second {
-		stroke: $color-white;
-		stroke-width: 55px;
-		fill: none;
-		stroke-dasharray: 105, 628;
-	}
-
-	&__meter-third{
-		stroke: $color-cerulean;
-		stroke-width: 53px;
-		fill: none;
-		stroke-dasharray: 95, 628;
-	}
-
-	&__meter-mask {
-		stroke: rgba(255,255,255,0.7);
-		stroke-width: 53px;
-		fill: none;
-		stroke-dasharray: 314, 628;
-	}
-
-	&__meter-needle {
+	&__needle {
 		position: absolute;
-		top: calc(50% - 10px);
-		left: calc(50% - 55px);
-		width: 65px;
-		height: 20px;
+		display: block;
+		width: 100%;
+		text-align: center;
+		top: 85px;
+		left: 0;
+		transform-origin: bottom center;
+		/*orientation fix*/
+		transform: rotate(270deg);
+	}
+
+	&__needle-img {
+		width: 20px;
+		height: 65px;
+	}
+
+	&__slider {
+		opacity: 0;
+		pointer-events: none;
+		width: 0;
+		height: 0;
+	}
+
+	&__slider-label {
+		display: inline-block;
+		font-size: 18px;
+		line-height: 24px;
+		color: $color-black;
+	}
+
+	&__slider-number {
+		display: block;
+		font-family: $font-family-roboto;
+		font-weight: 900;
+		font-size: 50px;
+		line-height: 22px;
+		margin-top: 27px;
+		color: $color-cerulean;
+	}
+
+	&__slider--wrapper {
+		margin-left: 66px;
+		margin-top: 16px;
+		max-width: 220px;
 	}
 }
 

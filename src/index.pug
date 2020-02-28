@@ -36,15 +36,18 @@ block content
 						+input__checkbox("skills__list-item", "Jquery", "Jquery", "", "Jquery", "checked")
 						+input__checkbox("skills__list-item", "Boostrap", "Boostrap", "", "Boostrap", "checked")
 				.skills__js
-					.circle
-						svg.circle__meter
-							circle.circle__meter-first(r="100" cx="50%" cy="50%")
-							circle.circle__meter-divider-first(r="100" cx="50%" cy="50%")
-							circle.circle__meter-second(r="100" cx="50%" cy="50%")
-							circle.circle__meter-divider-second(r="100" cx="50%" cy="50%")
-							circle.circle__meter-third(r="100" cx="50%" cy="50%")
-							circle.circle__meter-mask(r="100" cx="50%" cy="50%")
-						span(class="circle__meter-needle sprite-ico_arrow")
-						input(id="circle__meter-slider" type="range" min="0" max="100" value="0")
-						label(id="lbl value" for="")
-							| 0
+					.circle--wrapper
+						svg.circle
+							circle.circle__item.circle__item-first(cx="50%" cy="50%")
+							circle.circle__item.circle__item-range.circle__item-divider-first(cx="50%" cy="50%")
+							circle.circle__item.circle__item-range.circle__item-second(cx="50%" cy="50%")
+							circle.circle__item.circle__item-range.circle__item-divider-second(cx="50%" cy="50%")
+							circle.circle__item.circle__item-range.circle__item-third(cx="50%" cy="50%")
+							circle.circle__item.circle__item-mask(cx="50%" cy="50%" stroke-dasharray="314, 628")
+						.circle__needle
+							span.circle__needle-img.sprite-ico_arrow
+					.circle__slider--wrapper
+						input(class="circle__slider" type="range" min="0" max="1000" value="500")
+						label(class="circle__slider-label" for="")
+							| Мой уровень владения Java Script
+							span.circle__slider-number 0
