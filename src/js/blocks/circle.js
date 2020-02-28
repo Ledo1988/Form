@@ -24,33 +24,27 @@ var mask = document.querySelector(".circle__item-mask");
 var meter_needle =  document.querySelector(".circle__needle");
 var slider = document.querySelector(".circle__slider");
 var sliderNumber = document.querySelector(".circle__slider-number");
-var currentValue = 500;
-var maxValue = slider.max;
-var minValue = slider.min;
+var intervalCount;
+var startCount = slider.min;
+var endCount = 500;
+var currentCount = startCount;
+var maxCount = slider.max;
 
-function range_change_event() {
-	var meter_value = semi_cf - ((currentValue * semi_cf) / maxValue);
+var countUp = function() {
+	currentCount++;
 
+	var meter_value = semi_cf - ((currentCount * semi_cf) / maxCount);
 	mask.setAttribute("stroke-dasharray", meter_value + "," + cf);
 
-	for (var j = 0; j <= currentValue; j++) {
-			meter_needle.style.transform = "rotate(" +
-				(270 + ((j * 180) / maxValue)) + "deg)";
-			sliderNumber.textContent = j;
+	slider.value = currentCount;
+	meter_needle.style.transform = "rotate(" +
+		(270 + ((currentCount * 180) / maxCount)) + "deg)";
+	sliderNumber.textContent = currentCount;
+
+	if (currentCount === endCount) {
+		clearInterval(intervalCount);
 	}
-}
-//slider.addEventListener("input", range_change_event);
+};
 
-/* Slider Animation */
-function range_move_event() {
+intervalCount = setInterval(countUp, (1000 / (endCount + 1)));
 
-	for (var i = 0; i <= currentValue; i++) {
-		setInterval(function(){
-			slider.value = i++;
-			range_change_event();
-		}, 1000);
-
-	}
-}
-
-window.onload = range_move_event;
